@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <StartupObject>SpaceInvaders.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Cannon.bmp" />
+    <None Remove="Assets\Crab1.bmp" />
+    <None Remove="Assets\Crab2.bmp" />
+    <None Remove="Assets\Effects.bmp" />
+    <None Remove="Assets\Jelly1.bmp" />
+    <None Remove="Assets\Jelly2.bmp" />
+    <None Remove="Assets\Squid1.bmp" />
+    <None Remove="Assets\Squid2.bmp" />
+    <None Remove="Assets\startscreen.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\Cannon.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>Assets</CustomToolNamespace>
+    </Content>
+    <Content Include="Assets\Crab1.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>Assets</CustomToolNamespace>
+    </Content>
+    <Content Include="Assets\Crab2.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>Assets</CustomToolNamespace>
+    </Content>
+    <Content Include="Assets\Effects.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>Assets</CustomToolNamespace>
+    </Content>
+    <Content Include="Assets\Jelly1.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>Assets</CustomToolNamespace>
+    </Content>
+    <Content Include="Assets\Jelly2.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>Assets</CustomToolNamespace>
+    </Content>
+    <Content Include="Assets\Squid1.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>Assets</CustomToolNamespace>
+    </Content>
+    <Content Include="Assets\Squid2.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>Assets</CustomToolNamespace>
+    </Content>
+    <Content Include="Assets\startscreen.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>Assets</CustomToolNamespace>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SFML.Net" Version="2.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Assets\effectsCoord.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace>Assets</CustomToolNamespace>
+    </None>
+  </ItemGroup>
+
+</Project>
